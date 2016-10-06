@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.StockPorfolioController">
+   <children>
+      <TableView fx:id="stockTable" layoutX="-1.0" layoutY="41.0" prefHeight="559.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+        <columns>
+            <TableColumn fx:id="dateCol" prefWidth="83.0" text="Date" />
+          <TableColumn fx:id="nameCol" prefWidth="86.0" text="Stock Name" />
+          <TableColumn fx:id="numCol" prefWidth="117.0" text="Stock Number" />
+            <TableColumn fx:id="bPriceCol" prefWidth="118.0" text="Brought Price" />
+            <TableColumn fx:id="sPriceCol" prefWidth="96.0" text="Sold Price" />
+            <TableColumn fx:id="amountCol" prefWidth="103.0" text="Amount" />
+            <TableColumn fx:id="profitCol" prefWidth="98.0" text="Net Profit" />
+            <TableColumn fx:id="curPriceCol" prefWidth="98.0" text="Current Price" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="-11.0" prefHeight="40.0" prefWidth="179.0">
+        <buttons>
+            <Button minWidth="25.0" mnemonicParsing="false" onAction="#handleNew" prefHeight="37.0" prefWidth="356.0" text="New" />
+            <Button minWidth="25.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="37.0" prefWidth="356.0" text="Edit" />
+            <Button minWidth="25.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="37.0" prefWidth="356.0" text="Delete" />
+        </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="542.0" prefHeight="40.0" prefWidth="244.0">
+        <buttons>
+            <Button fx:id="holdingOnlyBtn" minWidth="25.0" mnemonicParsing="false" onAction="#handleShowHolding" prefHeight="37.0" prefWidth="356.0" text="Holding Only" />
+            <Button minWidth="25.0" mnemonicParsing="false" onAction="#handleShowGraphics" prefHeight="37.0" prefWidth="356.0" text="Show Statistics" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
